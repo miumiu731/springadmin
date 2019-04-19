@@ -1,0 +1,22 @@
+server:
+  port: 9999
+ 
+eureka:   
+  instance:
+    leaseRenewalIntervalInSeconds: 10
+    health-check-url-path: /actuator/health
+    prefer-ip-address: true
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://eureka.hperson.com/eureka/
+      
+spring:
+  application:
+    name: EURKA-SERVER
+  boot:
+    admin:
+      monitor:
+        period: 10000
+  
+
